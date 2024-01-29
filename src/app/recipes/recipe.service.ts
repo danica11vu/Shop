@@ -39,10 +39,6 @@ export class RecipeService{
         return this.recipes.slice();
     }
 
-    getRecipeById(index: number){
-        return this.recipes[index];
-    }
-
     addIngredientsToShoppingList(ingredients: Ingredient[]){
         this.shoppingListService.addIngredinets(ingredients);
     }
@@ -60,5 +56,9 @@ export class RecipeService{
     delteRecipe(index: number){
         this.recipes.splice(index, 1);
         this.recipesChange.next(this.recipes.slice());
+    }
+
+    getRecipeById(index: number){
+        return this.recipes[index];
     }
 }
