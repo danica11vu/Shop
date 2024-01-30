@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-xs-12">
-        <div class="alert alert-danger" *ngIf="error">{{error}}</div>
+        <!-- <div class="alert alert-danger" *ngIf="error">{{error}}</div>
+        <app-alert [message]="error" *ngIf="error"></app-alert> -->
         <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
             <div class="form-group">
                 <label for="email">E-mail</label>
@@ -29,13 +30,13 @@
                     class="btn btn-primary" 
                     type="submit"
                     [disabled]="!authForm.valid">
-                    {{isLogin ? 'Login' : 'Sign Up'}}
+                    {{isLogIn() ? 'Login' : 'Sign Up'}}
                 </button>
                 <button 
                     class="btn btn-primary" 
                     type="button" 
                     (click)="onSwitchMode()">
-                    {{isLogin ? 'Switch to Sign Up' : 'Switch to Login'}}
+                    {{isLogIn() ? 'Switch to Sign Up' : 'Switch to Login'}}
                 </button>
             </div>
         </form>

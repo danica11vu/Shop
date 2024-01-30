@@ -4,6 +4,7 @@ import {  Subject } from "rxjs";
 import { User } from "./user.model";
 import { tap } from "rxjs/operators";
 import { Router } from "@angular/router";
+import { environment } from "../../../environment/environment";
 
 interface AuthResponse{
     idToken: string;
@@ -22,7 +23,7 @@ export class AuthService{
     }
 
     signUp(email: string, password: string){
-        return this.http.post<AuthResponse>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB6L4jJ4TMgWk8BayCcHwITVfFqeX9M2Gw',
+        return this.http.post<AuthResponse>(environment.signUpKey + environment.apiKey,
         {
             email: email,
             password: password,
@@ -45,7 +46,7 @@ export class AuthService{
     }
 
     logIn(email: string, password: string){
-        return this.http.post<AuthResponse>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB6L4jJ4TMgWk8BayCcHwITVfFqeX9M2Gw',
+        return this.http.post<AuthResponse>(environment.logInKey + environment.apiKey,
         {
             email: email,
             password: password,
