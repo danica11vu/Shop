@@ -5,11 +5,11 @@ import { CommonModule } from "@angular/common";
 
 @NgModule({
     declarations: [
-        AlertComponent,
-        DropdownDirective
+        AlertComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        DropdownDirective
     ],
     exports: [
         AlertComponent,

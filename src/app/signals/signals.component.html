@@ -1,0 +1,10 @@
+<p> Counter:{{counter()}}</p>
+<div class="counter-btns">
+    <button (click)="increment()">Increment</button>
+    <button (click)="decrement()">Decrement</button>
+</div>
+
+<h2>Action</h2>
+<ol>
+    <li *ngFor="let actions of actions()">{{actions}}</li>
+</ol>

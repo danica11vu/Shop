@@ -9,6 +9,8 @@
                 <li routerLinkActive="active" *ngIf="isAuth"><a routerLink="/recipes">Recipes</a></li>
                 <li routerLinkActive="active" *ngIf="isAuth"><a routerLink="/shopping-list">Shopping List</a></li>
                 <li routerLinkActive="active" *ngIf="!isAuth"><a routerLink="/auth">Authentication</a></li>
+                <li routerLinkActive="active" *ngIf="isAuth"><a routerLink="/signals">Signals</a></li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li *ngIf="isAuth">

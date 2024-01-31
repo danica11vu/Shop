@@ -13,6 +13,7 @@ import { AuthComponent } from './auth/auth/auth.component';
 import { RecipesModule } from './recipes/recipes.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
+import { SignalsComponent } from './signals/signals.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CoreModule } from './core.module';
     ReactiveFormsModule,
     RecipesModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    SignalsComponent
   ],
   exports: [ReactiveFormsModule],
   bootstrap: [AppComponent]
