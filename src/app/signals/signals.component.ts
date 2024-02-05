@@ -15,13 +15,11 @@ export class SignalsComponent {
   increment(){
     this.counter.update((oldValue) => oldValue+1);
     this.actions.update((oldValue)=> [...oldValue, 'Increment']);
-    //this.actions.push('Increment');
   }
 
   decrement(){
     this.counter.set(this.counter()-1);
     this.actions.update((oldValue) => [...oldValue, 'Decrement']);
-    //this.actions.push('Decrement');
   }
 
 }

@@ -14,6 +14,8 @@ import { RecipesModule } from './recipes/recipes.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
 import { SignalsComponent } from './signals/signals.component';
+import { StoreModule } from '@ngrx/store';
+import { shoppingListReducer } from './shopping-list/store/shopping-list.reducer';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { SignalsComponent } from './signals/signals.component';
     RecipesModule,
     SharedModule,
     CoreModule,
-    SignalsComponent
+    SignalsComponent,
+    StoreModule.forRoot({shoppingList: shoppingListReducer})
   ],
   exports: [ReactiveFormsModule],
   bootstrap: [AppComponent]
