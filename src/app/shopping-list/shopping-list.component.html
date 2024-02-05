@@ -5,11 +5,13 @@
     <hr>
 </div>
 <div class="row">
-    <ul class="list-group"><a 
-        href="#" 
+    <ul class="list-group">
+        <a
         class="list-group-item" 
         style="cursor: pointer;"
-        *ngFor="let ing of ingredients">
-        {{ing.name}}  {{ing.amount}}
-    </a></ul>
+        *ngFor="let ing of (ingredients | async).ingredients; let i=index;"
+        (click)="onEditItem(i)">
+        {{ing.name | shorten:5}}  {{ing.amount}}
+        </a>
+    </ul>
 </div>
